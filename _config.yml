@@ -1,9 +1,8 @@
 title: Sandbox
 url:   'https://typography-and-interaction-too.github.io'
+theme:
 
 livereload: true
-open_url:   true
-theme:
 
 defaults:
   -
