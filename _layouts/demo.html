@@ -8,11 +8,11 @@ layout: default
 			{% for file in files %}
 				{% if file.extname == ".css" %}
 					{% highlight css %}
-						{% include_relative {{ file.name }} %}
+						{%- include_relative {{ file.name }} -%}
 					{% endhighlight %}
 				{% elsif file.extname == ".html" %}
 					{% highlight html %}
-						{% include_relative {{ file.name }} %}
+						{%- include_relative {{ file.name }} -%}
 					{% endhighlight %}
 				{% endif %}
 			{% endfor %}

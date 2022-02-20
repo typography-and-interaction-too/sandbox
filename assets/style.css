@@ -35,12 +35,23 @@ main {
 	border-width: 4px;
 	display: grid;
 	gap: 4px;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	justify-items: stretch;
+}
+
+section {
+	overflow: scroll;
 }
 
 figure {
 	padding: 20px;
+}
+
+pre {
+	font-family: monospace;
+	font-size: 16px;
+	tab-size: 2;
+	white-space: pre;
 }
 
 iframe {
