@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% assign demos = site.pages | where: "layout", "demo" %}
+<h1>Demos</h1>
+<ul>
+	{% for page in demos %}
+		<li><a href="{{ page.url }}">{{ page.dir | remove: "/" }}</a>
+	{% endfor %}
+</ul>

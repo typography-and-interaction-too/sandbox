@@ -1,4 +1,3 @@
 ---
+layout: list
 ---
-
-This is a *markdown* page.
