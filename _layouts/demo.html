@@ -4,24 +4,25 @@ layout: default
 
 <main>
 	<section>
-			{% assign files = site.static_files | where_exp: "file", "file.path contains page.dir" | where_exp: "file", "file.extname != '.md'" %}
-			{% assign selected = files | where_exp: "file", "file.name == page.initial" %}
-			{% assign unselected = files | where_exp: "file", "file.name != page.initial" %}
-			{% assign files = selected | concat: unselected %}
+			{% if page.order %}
+				{% assign files = page.order %}
+			{% else %}
+				{% assign files = site.static_files | where_exp: "file", "file.path contains page.dir" | where_exp: "file", "file.extname != '.md'" | map: 'name' %}
+			{% endif %}
 			<ul>
 				{% for file in files %}
-					<li>{{ file.name }}</li>
+					<li>{{ file }}</li>
 				{% endfor %}
 			</ul>
 			<section>
 				{% for file in files %}
-					{% if file.extname == ".css" %}
+					{% if file contains ".css" %}
 						{% highlight css %}
-							{%- include_relative {{ file.name }} -%}
+							{%- include_relative {{ file }} -%}
 						{% endhighlight %}
-					{% elsif file.extname == ".html" %}
+					{% elsif file contains ".html" %}
 						{% highlight html %}
-							{%- include_relative {{ file.name }} -%}
+							{%- include_relative {{ file }} -%}
 						{% endhighlight %}
 					{% endif %}
 				{% endfor %}

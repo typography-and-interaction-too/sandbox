@@ -1,3 +1,5 @@
 ---
-initial: style.css
+order:
+  - style.css
+  - index.html
 ---
