@@ -30,11 +30,7 @@ ul a {
 main {
 	align-items: stretch;
 	background-color: var(--background);
-	border-color: var(--background);
-	border-style: solid;
-	border-width: 4px;
 	display: grid;
-	gap: 4px;
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	justify-items: stretch;
 }
@@ -50,13 +46,14 @@ figure {
 }
 
 pre {
-	font-family: monospace;
-	font-size: 16px;
 	tab-size: 2;
 	white-space: pre;
 }
 
 iframe {
 	background-color: white;
-	border: initial;
+	border-color: var(--background);
+	border-left-width: 0;
+	border-style: solid;
+	border-width: 4px;
 }
