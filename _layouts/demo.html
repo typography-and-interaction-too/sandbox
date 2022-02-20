@@ -5,17 +5,24 @@ layout: default
 <main>
 	<section>
 			{% assign files = site.static_files | where_exp: "file", "file.path contains page.dir"  | where_exp: "file", "file.extname != '.md'" %}
-			{% for file in files %}
-				{% if file.extname == ".css" %}
-					{% highlight css %}
-						{%- include_relative {{ file.name }} -%}
-					{% endhighlight %}
-				{% elsif file.extname == ".html" %}
-					{% highlight html %}
-						{%- include_relative {{ file.name }} -%}
-					{% endhighlight %}
-				{% endif %}
-			{% endfor %}
+			<ul>
+				{% for file in files %}
+					<li>{{ file.name }}</li>
+				{% endfor %}
+			</ul>
+			<section>
+				{% for file in files %}
+					{% if file.extname == ".css" %}
+						{% highlight css %}
+							{%- include_relative {{ file.name }} -%}
+						{% endhighlight %}
+					{% elsif file.extname == ".html" %}
+						{% highlight html %}
+							{%- include_relative {{ file.name }} -%}
+						{% endhighlight %}
+					{% endif %}
+				{% endfor %}
+			</section>
 	</section>
 	<iframe src="index.html"></iframe>
 </main>

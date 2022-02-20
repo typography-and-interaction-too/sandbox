@@ -1,5 +1,6 @@
 :root{
-	--background: #eee;
+	--background: rgb(247, 246, 243);
+	--spacing: 20px;
 }
 
 html,
@@ -16,9 +17,9 @@ body {
 
 
 h1,
-ul {
+body > ul {
 	font-weight: bold;
-	margin: 24px;
+	margin: var(--spacing);
 }
 
 ul a {
@@ -35,25 +36,55 @@ main {
 	justify-items: stretch;
 }
 
-section {
+main > section {
+	font-family: SFMono-Regular, Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+	font-size: 85%;
+	display: flex;
+	flex-direction: column;
+}
+
+section > ul {
+	background-color: var(--background);
+	display: flex;
+	flex-shrink: 0;
+	gap: var(--spacing);
+	left: 0;
+	max-width: 100%;
+	overflow-y: scroll;
+	padding: var(--spacing);
+	position: sticky;
+	top: 0;
+}
+
+section > section {
+	height: 100%;
 	overflow: scroll;
-	font-family: 'IBM Plex Mono', monospace;
-	font-size: 16px;
+	position: relative;
+	width: 100%;
 }
 
 figure {
-	padding: 20px;
+	position: absolute;
+	max-height: 100%;
+	width: 100%;
+}
+
+figure:not(:first-child) {
+	display: none;
 }
 
 pre {
 	tab-size: 2;
 	white-space: pre;
+	padding: var(--spacing);
+	padding-top: initial;
+	line-height: 1.5;
 }
 
 iframe {
 	background-color: white;
 	border-color: var(--background);
-	border-left-width: 0;
 	border-style: solid;
 	border-width: 4px;
+	border-left-width: 0px;
 }
