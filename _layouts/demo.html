@@ -4,7 +4,10 @@ layout: default
 
 <main>
 	<section>
-			{% assign files = site.static_files | where_exp: "file", "file.path contains page.dir"  | where_exp: "file", "file.extname != '.md'" %}
+			{% assign files = site.static_files | where_exp: "file", "file.path contains page.dir" | where_exp: "file", "file.extname != '.md'" %}
+			{% assign selected = files | where_exp: "file", "file.name == page.initial" %}
+			{% assign unselected = files | where_exp: "file", "file.name != page.initial" %}
+			{% assign files = selected | concat: unselected %}
 			<ul>
 				{% for file in files %}
 					<li>{{ file.name }}</li>
