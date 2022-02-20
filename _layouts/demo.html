@@ -4,7 +4,7 @@ layout: default
 
 <main>
 	<section>
-			{% assign files = site.static_files | where_exp: "file", "file.path contains page.dir" %}
+			{% assign files = site.static_files | where_exp: "file", "file.path contains page.dir"  | where_exp: "file", "file.extname != '.md'" %}
 			{% for file in files %}
 				{% if file.extname == ".css" %}
 					{% highlight css %}
