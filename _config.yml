@@ -3,10 +3,11 @@ url:   'https://typography-and-interaction-too.github.io'
 
 livereload: true
 open_url:   true
+theme:
 
 defaults:
   -
     scope:
       path: ""
     values:
-      layout: "default"
+      layout: "demo"
