@@ -72,10 +72,6 @@ figure {
 	width: 100%;
 }
 
-figure:not(:first-child) {
-	display: none;
-}
-
 pre {
 	tab-size: 2;
 	white-space: pre;
