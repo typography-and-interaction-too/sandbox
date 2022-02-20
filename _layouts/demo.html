@@ -4,6 +4,18 @@ layout: default
 
 <main>
 	<section>
+			{% assign files = site.static_files | where_exp: "file", "file.path contains page.dir" %}
+			{% for file in files %}
+				{% if file.extname == ".css" %}
+					{% highlight css %}
+						{% include_relative {{ file.name }} %}
+					{% endhighlight %}
+				{% elsif file.extname == ".html" %}
+					{% highlight html %}
+						{% include_relative {{ file.name }} %}
+					{% endhighlight %}
+				{% endif %}
+			{% endfor %}
 	</section>
 	<iframe src="index.html"></iframe>
 </main>
