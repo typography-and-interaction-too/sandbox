@@ -1,6 +1,5 @@
 title:   Sandbox
-url:     'https://typography-and-interaction-too.github.io'
-baseurl: /sandbox
+url:     'https://typography-and-interaction-too.github.io/sandbox'
 theme:
 
 livereload: true

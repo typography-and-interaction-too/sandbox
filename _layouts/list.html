@@ -6,6 +6,6 @@ layout: default
 <h1>Demos</h1>
 <ul>
 	{% for page in demos %}
-		<li><a href="{{ page.url | remove: '.html' }}">{{ page.dir | remove: "/" }}</a>
+		<li><a href="{{ page.url | relative_url | remove: '.html' }}">{{ page.dir | remove: "/" }}</a>
 	{% endfor %}
 </ul>
