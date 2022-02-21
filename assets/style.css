@@ -59,6 +59,10 @@ section > ul {
 	top: 0;
 }
 
+section > ul::-webkit-scrollbar {
+	display: none;
+}
+
 section > ul > li {
 	cursor: pointer;
 	margin: calc(-1 * var(--spacing) / 2);
@@ -78,6 +82,10 @@ section > section {
 }
 
 section > section > div:not(.visible) {
+	display: none;
+}
+
+section > section::-webkit-scrollbar {
 	display: none;
 }
 
