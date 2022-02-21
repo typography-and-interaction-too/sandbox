@@ -11,20 +11,22 @@ layout: default
 			{% endif %}
 			<ul>
 				{% for file in files %}
-					<li>{{ file }}</li>
+					<li {% if forloop.first %} class="visible" {% endif %}>{{ file }}</li>
 				{% endfor %}
 			</ul>
 			<section>
 				{% for file in files %}
-					{% if file contains ".css" %}
-						{% highlight css %}
-							{%- include_relative {{ file }} -%}
-						{% endhighlight %}
-					{% elsif file contains ".html" %}
-						{% highlight html %}
-							{%- include_relative {{ file }} -%}
-						{% endhighlight %}
-					{% endif %}
+					<div {% if forloop.first %} class="visible" {% endif %}>
+						{% if file contains ".css" %}
+							{% highlight css %}
+								{%- include_relative {{ file }} -%}
+							{% endhighlight %}
+						{% elsif file contains ".html" %}
+							{% highlight html %}
+								{%- include_relative {{ file }} -%}
+							{% endhighlight %}
+						{% endif %}
+					</div>
 				{% endfor %}
 			</section>
 	</section>

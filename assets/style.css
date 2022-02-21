@@ -59,11 +59,26 @@ section > ul {
 	top: 0;
 }
 
+section > ul > li {
+	cursor: pointer;
+	margin: calc(-1 * var(--spacing) / 2);
+	padding: calc(var(--spacing) / 2);
+}
+
+
+section > ul > li:not(.visible) {
+	opacity: 0.25;
+}
+
 section > section {
 	height: 100%;
 	overflow: scroll;
 	position: relative;
 	width: 100%;
+}
+
+section > section > div:not(.visible) {
+	display: none;
 }
 
 figure {
