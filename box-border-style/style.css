@@ -1,18 +1,3 @@
-body {
-	font-family: sans-serif;
-	padding: 20px;
-}
-
-div {
-	padding: 10px;
-}
-
-div:not(:first-child) {
-	margin-top: 10px;
-}
-
-
-
 div:nth-child(1) {
 	border-style: none;
 }
@@ -51,4 +36,19 @@ div:nth-child(9) {
 
 div:nth-child(10) {
 	border-style: outset;
+}
+
+
+
+body {
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+div {
+	padding: 10px;
+}
+
+div:not(:first-child) {
+	margin-top: 10px;
 }
