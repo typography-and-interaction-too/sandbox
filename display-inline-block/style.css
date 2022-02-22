@@ -6,7 +6,6 @@ p:not(:first-child) {
 }
 
 div:nth-child(2) p:not(:first-child) {
-	font-style: italic;
 	white-space: pre;
 	display: inline-block;
 	padding: 5px;
