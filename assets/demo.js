@@ -1,6 +1,6 @@
-const fileSelection = () => {
-	const visibleClass = 'visible'
+const visibleClass = 'visible'
 
+const selectFile = () => {
 	const files = [...document.getElementById('files').children]
 	const source = [...document.getElementById('source').children]
 
@@ -17,6 +17,17 @@ const fileSelection = () => {
 	})
 }
 
+const copyFile = () => {
+	const copyButton = 	document.getElementById('copy')
+
+	copyButton.onclick = () => {
+		let source = document.getElementById('source').querySelector('.visible code').innerText
+
+		navigator.clipboard.writeText(source)
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-	fileSelection()
+	selectFile()
+	copyFile()
 })

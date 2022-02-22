@@ -39,11 +39,17 @@ div > ul::-webkit-scrollbar {
 
 div > ul > li,
 div > section > button {
+	border-radius: var(--radius);
 	cursor: pointer;
+	pointer-events: auto;
 	margin: calc(-1 * var(--spacing) / 2);
 	padding: calc(var(--spacing) / 2);
 }
 
+div > ul > li:active,
+div > section > button:active {
+	background-color: rgba(0, 0, 0, 0.1);
+}
 
 div > ul > li:not(.visible) {
 	opacity: 0.25;
@@ -68,7 +74,7 @@ div > section {
 
 div > section > button {
 	transform: translateY(-5px);
-	pointer-events: auto;
+	width: calc(var(--spacing) * 2);
 }
 
 section > div:last-child {
