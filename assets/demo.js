@@ -33,10 +33,25 @@ const iframeCheck = () => {
 	}
 }
 
+const selectAll = () => {
+	window.addEventListener('click', (event) => {
+		if (event.detail == 4) {
+			let source = document.getElementById('source').querySelector('.visible code')
+			let selection = window.getSelection()
+			let range = document.createRange()
+
+			range.selectNodeContents(source)
+  		selection.removeAllRanges()
+			selection.addRange(range)
+		}
+	})
+}
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
 	selectFile()
 	copyFile()
 	iframeCheck()
+	selectAll()
 })
