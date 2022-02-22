@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign demos = site.pages | where: "layout", "demo" %}
+{% assign demos = site.pages | where: "layout", "demo"  | sort: "path" %}
 <h1>Demos</h1>
 <ul>
 	{% for page in demos %}
