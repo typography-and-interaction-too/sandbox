@@ -59,6 +59,7 @@ section > section::-webkit-scrollbar {
 }
 
 figure {
+	display: flex;
 	max-height: 100%;
 	position: absolute;
 	width: 100%;
@@ -66,11 +67,14 @@ figure {
 
 pre {
 	line-height: 1.5;
-	padding: var(--spacing);
+	padding-left: var(--spacing);
+	padding-right: var(--spacing);
 	tab-size: 2;
 	white-space: pre;
+}
 
-	padding-top: initial;
+code {
+	padding-bottom: var(--spacing);
 }
 
 iframe {
