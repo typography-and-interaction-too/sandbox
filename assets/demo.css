@@ -3,6 +3,7 @@ main {
 	background-color: var(--background);
 	border-radius: var(--radius);
 	display: grid;
+	grid-template-columns: 100%;
 	grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
 	justify-items: stretch;
 	overflow: hidden;
@@ -13,6 +14,10 @@ main > section {
 	flex-direction: column;
 	font-family: SFMono-Regular, Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
 	font-size: 85%;
+}
+
+section > div {
+	position: relative;
 }
 
 div > ul {
@@ -32,7 +37,8 @@ div > ul::-webkit-scrollbar {
 	display: none;
 }
 
-div > ul > li {
+div > ul > li,
+div > section > button {
 	cursor: pointer;
 	margin: calc(-1 * var(--spacing) / 2);
 	padding: calc(var(--spacing) / 2);
@@ -43,10 +49,31 @@ div > ul > li:not(.visible) {
 	opacity: 0.25;
 }
 
+div > ul > li:last-child {
+	margin-right: calc(var(--spacing) * 3);
+}
+
+div > section {
+	background: gold;
+	background: linear-gradient(to right, rgba(var(--background--rgb),0), rgba(var(--background--rgb),1) var(--spacing));
+	bottom: 0;
+	padding: var(--spacing);
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	padding-left: calc(var(--spacing) * 1.5);
+}
+
+div > section > button {
+	transform: translateY(-5px);
+	pointer-events: auto;
+}
+
 section > div:last-child {
 	height: 100%;
 	overflow: scroll;
-	position: relative;
 	width: 100%;
 }
 
