@@ -35,7 +35,7 @@ textarea {
 	white-space: revert;
 }
 
-/* Reset default text opacity of input placeholder. */
+/* Reset default text opacityn of input placeholder. */
 ::placeholder {
 	all: unset;
 }
@@ -43,10 +43,6 @@ textarea {
 
 
 /* Chrome user-agent stuff for Notion “app”. */
-:root {
-	font-size: 16px;
-}
-
 p,
 ul,
 figure {
