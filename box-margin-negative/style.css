@@ -1,0 +1,9 @@
+/* Previous styles in other file. */
+
+div:not(:first-child) {
+	margin-top: 20px;
+}
+
+div:first-child {
+	margin-bottom: -10px;
+}
