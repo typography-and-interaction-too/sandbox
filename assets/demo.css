@@ -15,7 +15,7 @@ main > section {
 	font-size: 85%;
 }
 
-section > ul {
+div > ul {
 	background-color: var(--background);
 	display: flex;
 	flex-shrink: 0;
@@ -28,33 +28,33 @@ section > ul {
 	top: 0;
 }
 
-section > ul::-webkit-scrollbar {
+div > ul::-webkit-scrollbar {
 	display: none;
 }
 
-section > ul > li {
+div > ul > li {
 	cursor: pointer;
 	margin: calc(-1 * var(--spacing) / 2);
 	padding: calc(var(--spacing) / 2);
 }
 
 
-section > ul > li:not(.visible) {
+div > ul > li:not(.visible) {
 	opacity: 0.25;
 }
 
-section > section {
+section > div:last-child {
 	height: 100%;
 	overflow: scroll;
 	position: relative;
 	width: 100%;
 }
 
-section > section > div:not(.visible) {
+section > div:last-child > div:not(.visible) {
 	display: none;
 }
 
-section > section::-webkit-scrollbar {
+section > div:last-child::-webkit-scrollbar {
 	display: none;
 }
 

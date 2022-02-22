@@ -9,12 +9,14 @@ layout: default
 		{% else %}
 			{% assign files = site.static_files | where_exp: "file", "file.path contains page.dir" | where_exp: "file", "file.extname != '.md'" | map: 'name' %}
 		{% endif %}
-		<ul id="files">
-			{% for file in files %}
-				<li {% if forloop.first %} class="visible" {% endif %}>{{ file }}</li>
-			{% endfor %}
-		</ul>
-		<section id="source">
+		<div>
+			<ul id="files">
+				{% for file in files %}
+					<li {% if forloop.first %} class="visible" {% endif %}>{{ file }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div id="source">
 			{% for file in files %}
 				<div {% if forloop.first %} class="visible" {% endif %}>
 					{% if file contains ".css" %}
@@ -28,7 +30,7 @@ layout: default
 					{% endif %}
 				</div>
 			{% endfor %}
-		</section>
+		</div>
 	</section>
 	<iframe src="index.html"></iframe>
 </main>
