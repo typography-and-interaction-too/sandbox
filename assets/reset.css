@@ -39,3 +39,29 @@ textarea {
 ::placeholder {
 	all: unset;
 }
+
+
+
+/* Chrome user-agent stuff for Notion “app”. */
+:root {
+	font-size: 16px;
+}
+
+p,
+ul,
+figure {
+	margin-block-start:   initial;
+	margin-block-end:     initial;
+	margin-inline-start:  initial;
+	margin-inline-end:    initial;
+	padding-inline-start: initial;
+}
+
+body,
+pre {
+	margin: initial;
+}
+
+iframe {
+	border-image: initial;
+}
