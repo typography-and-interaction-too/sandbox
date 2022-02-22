@@ -1,0 +1,5 @@
+/* Previous styles in other file. */
+
+div:nth-child(2) {
+	visibility: hidden;
+}
