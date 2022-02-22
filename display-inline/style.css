@@ -1,0 +1,12 @@
+/* Previous styles in other file. */
+
+p:not(:first-child) {
+	margin-top: 10px;
+	background-color: gold;
+}
+
+div:nth-child(2) p:not(:first-child) {
+	display: inline;
+	font-style: italic;
+	white-space: pre;
+}
