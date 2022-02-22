@@ -41,9 +41,10 @@ div > ul > li,
 div > section > button {
 	border-radius: var(--radius);
 	cursor: pointer;
-	pointer-events: auto;
 	margin: calc(-1 * var(--spacing) / 2);
 	padding: calc(var(--spacing) / 2);
+	pointer-events: auto;
+	user-select: none;
 }
 
 div > ul > li:active,
@@ -64,7 +65,6 @@ div > ul > li:last-child {
 }
 
 div > section {
-	background: gold;
 	background: linear-gradient(to right, rgba(var(--background--rgb),0), rgba(var(--background--rgb),1) var(--spacing));
 	bottom: 0;
 	padding: var(--spacing);
@@ -123,6 +123,7 @@ iframe {
 	border-color: var(--background);
 	border-style: solid;
 	border-width: var(--radius);
+	user-select: none;
 
 	border-top-width: 0px;
 }
