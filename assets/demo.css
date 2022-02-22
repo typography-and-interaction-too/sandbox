@@ -59,6 +59,10 @@ div > ul > li:last-child {
 	margin-right: calc(var(--spacing) * 3);
 }
 
+.iframe div > ul > li:last-child {
+	margin-right: initial;
+}
+
 div > section {
 	background: gold;
 	background: linear-gradient(to right, rgba(var(--background--rgb),0), rgba(var(--background--rgb),1) var(--spacing));
@@ -70,6 +74,10 @@ div > section {
 	top: 0;
 
 	padding-left: calc(var(--spacing) * 1.5);
+}
+
+.iframe div > section {
+	display: none; /* Clipboard doesn’t work in iframes, check with JS. */
 }
 
 div > section > button {

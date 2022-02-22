@@ -27,7 +27,16 @@ const copyFile = () => {
 	}
 }
 
+const iframeCheck = () => {
+	if (window.self != window.top) {
+		document.body.classList.add('iframe')
+	}
+}
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
 	selectFile()
 	copyFile()
+	iframeCheck()
 })
