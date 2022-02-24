@@ -1,6 +1,6 @@
 ---
 order:
   - style.css
-  - previous.css
+  - setup.css
   - index.html
 ---
