@@ -1,0 +1,11 @@
+section {
+	display: flex;
+}
+
+section:first-child {
+	flex-direction: row-reverse;
+}
+
+section:last-child {
+	flex-direction: column-reverse;
+}

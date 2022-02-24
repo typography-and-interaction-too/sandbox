@@ -1,0 +1,19 @@
+body {
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+div {
+	background-color: tomato;
+	padding: 5px;
+}
+
+section {
+	background-color: gold;
+	padding: 10px;
+	height: 160px;
+}
+
+section:not(:first-child) {
+	margin-top: 20px;
+}
