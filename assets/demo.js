@@ -1,7 +1,7 @@
 const visibleClass = 'visible'
 
 const selectFile = () => {
-	const files = [...document.getElementById('files').children]
+	const files = [...document.querySelector('#files ul').children]
 	const source = [...document.getElementById('source').children]
 
 	files.forEach((file) => {

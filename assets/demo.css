@@ -16,11 +16,11 @@ main > section {
 	font-size: 85%;
 }
 
-section > div {
+#files {
 	position: relative;
 }
 
-div > ul {
+#files > ul {
 	background-color: var(--background);
 	display: flex;
 	flex-shrink: 0;
@@ -33,12 +33,12 @@ div > ul {
 	top: 0;
 }
 
-div > ul::-webkit-scrollbar {
+#files > ul::-webkit-scrollbar {
 	display: none;
 }
 
-div > ul > li,
-div > section > button {
+#files li,
+#files button {
 	border-radius: var(--radius);
 	cursor: pointer;
 	margin: calc(-1 * var(--spacing) / 2);
@@ -47,24 +47,24 @@ div > section > button {
 	user-select: none;
 }
 
-div > ul > li:active,
-div > section > button:active {
+#files li:active,
+#files button:active {
 	background-color: rgba(0, 0, 0, 0.1);
 }
 
-div > ul > li:not(.visible) {
+#files li:not(.visible) {
 	opacity: 0.25;
 }
 
-div > ul > li:last-child {
+#files li:last-child {
 	margin-right: calc(var(--spacing) * 3);
 }
 
-.iframe div > ul > li:last-child {
+.iframe #files li:last-child {
 	margin-right: initial;
 }
 
-div > section {
+#files > section {
 	background: linear-gradient(to right, rgba(var(--background--rgb),0), rgba(var(--background--rgb),1) var(--spacing));
 	bottom: 0;
 	padding: var(--spacing);
@@ -76,30 +76,30 @@ div > section {
 	padding-left: calc(var(--spacing) * 1.5);
 }
 
-.iframe div > section {
+.iframe #files > section {
 	display: none; /* Clipboard doesn’t work in iframes, check with JS. */
 }
 
-div > section > button {
+#files button {
 	transform: translateY(-5px);
 	width: calc(var(--spacing) * 2);
 }
 
-section > div:last-child {
+#source {
 	height: 100%;
 	overflow: scroll;
 	width: 100%;
 }
 
-section > div:last-child > div {
+#source > div {
 	height: 100%;
 }
 
-section > div:last-child > div:not(.visible) {
+#source > div:not(.visible) {
 	display: none;
 }
 
-section > div:last-child::-webkit-scrollbar {
+#source::-webkit-scrollbar {
 	display: none;
 }
 
