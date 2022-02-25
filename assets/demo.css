@@ -82,8 +82,19 @@ main > section {
 }
 
 #files button {
-	transform: translateY(-5px);
-	width: calc(var(--spacing) * 2);
+	box-sizing: content-box;
+	font-size: 1rem;
+	height: 1rem;
+	transform: translateY(-2px);
+	width: 1rem;
+}
+
+/* Safari. */
+@supports (-webkit-hyphens:none) {
+	#files button {
+		font-size: 85%;
+		transform: translateY(-3px);
+	}
 }
 
 #source {
