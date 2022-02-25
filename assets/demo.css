@@ -16,7 +16,8 @@ main > section {
 	font-size: 85%;
 }
 
-#files {
+#files,
+#source {
 	position: relative;
 }
 
