@@ -16,6 +16,6 @@ div:nth-child(2) {
 }
 
 div:last-child {
-	background: salmon;
+	background: lightsalmon;
 	order: -1;
 }
