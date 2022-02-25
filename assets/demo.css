@@ -126,11 +126,13 @@ pre {
 	display: block;
 	height: 100%;
 	line-height: 1.5;
-	padding-bottom: var(--spacing);
-	padding-left: var(--spacing);
-	padding-right: var(--spacing);
+	padding: var(--spacing);
 	tab-size: 2;
 	white-space: pre;
+}
+
+#files + #source pre {
+	padding-top: initial;
 }
 
 iframe {

@@ -9,16 +9,18 @@ layout: default
 		{% else %}
 			{% assign files = site.static_files | where_exp: "file", "file.path contains page.dir" | where_exp: "file", "file.extname != '.md'" | map: 'name' %}
 		{% endif %}
-		<div id="files">
-			<ul>
-				{% for file in files %}
-					<li {% if forloop.first %} class="visible" {% endif %}>{{ file }}</li>
-				{% endfor %}
-			</ul>
-			<section>
-				<button id="copy">📋</button>
-			</section>
-		</div>
+		{% if files.size > 1 %}
+			<div id="files">
+				<ul>
+					{% for file in files %}
+						<li {% if forloop.first %} class="visible" {% endif %}>{{ file }}</li>
+					{% endfor %}
+				</ul>
+				<section>
+					<button id="copy">📋</button>
+				</section>
+			</div>
+		{% endif %}
 		<div id="source">
 			{% for file in files %}
 				<div {% if forloop.first %} class="visible" {% endif %}>
