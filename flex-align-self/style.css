@@ -14,13 +14,13 @@ div:nth-child(1) {
 }
 
 div:nth-child(2) {
-	align-self: flex-start;
 	background-color: lightsalmon;
+	align-self: flex-start;
 }
 
 div:nth-child(3) {
-	align-self: center;
 	background-color: crimson;
+	align-self: center;
 }
 
 div:nth-child(4) {

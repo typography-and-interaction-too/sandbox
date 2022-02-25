@@ -6,16 +6,16 @@ section {
 }
 
 div:first-child {
-	background: crimson;
+	background-color: crimson;
 	order: 1;
 }
 
 div:nth-child(2) {
-	background: hotpink;
+	background-color: hotpink;
 	order: 2;
 }
 
 div:last-child {
-	background: lightsalmon;
+	background-color: lightsalmon;
 	order: -1;
 }

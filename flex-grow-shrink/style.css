@@ -9,18 +9,18 @@ section:nth-child(2) div {
 }
 
 section:nth-child(3) div:first-child {
-	flex-grow: 1;
 	background-color: hotpink;
+	flex-grow: 1;
 }
 
 section:nth-child(4) div:nth-child(1) {
-	flex-grow: 1;
 	background-color: hotpink;
+	flex-grow: 1;
 }
 
 section:nth-child(4) div:nth-child(2) {
-	flex-grow: 2;
 	background-color: crimson;
+	flex-grow: 2;
 }
 
 section:nth-child(5) div {

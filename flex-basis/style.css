@@ -6,6 +6,6 @@ section {
 }
 
 div:nth-child(1) {
-	flex-basis: 50%;
 	background-color: lightsalmon;
+	flex-basis: 50%;
 }
