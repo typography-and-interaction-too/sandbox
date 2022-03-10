@@ -92,9 +92,9 @@ const codeResize = () => {
 	})
 
 	document.addEventListener('mouseup', (event) => {
+		document.removeEventListener('mousemove', codeResize, false)
 		codeTrayX = parseInt(getComputedStyle(codeTray, '').width)
 		codeTrayY = parseInt(getComputedStyle(codeTray, '').height)
-		document.removeEventListener('mousemove', codeResize, false)
 	})
 
 	affordance.addEventListener('click', (event) => {
