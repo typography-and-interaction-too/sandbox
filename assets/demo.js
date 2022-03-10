@@ -62,8 +62,8 @@ const codeResize = () => {
 
 	window.addEventListener('resize', () => {
 		(window.innerWidth >= 568) ? vertical = false : vertical = true
-		codeTray.style.removeProperty("height")
-		codeTray.style.removeProperty("width")
+		codeTray.style.removeProperty('height')
+		codeTray.style.removeProperty('width')
 		codeTrayX = parseInt(getComputedStyle(codeTray, '').width)
 		codeTrayY = parseInt(getComputedStyle(codeTray, '').height)
 	})
@@ -72,11 +72,11 @@ const codeResize = () => {
 		document.getSelection().removeAllRanges()
 		if (vertical) {
 			const delta = event.y - mouseY
-			codeTray.style.height = (codeTrayY + delta) + "px"
+			codeTray.style.height = (codeTrayY + delta) + 'px'
 		}
 		else {
 			const delta = event.x - mouseX
-			codeTray.style.width = (codeTrayX + delta) + "px"
+			codeTray.style.width = (codeTrayX + delta) + 'px'
 		}
 	}
 
