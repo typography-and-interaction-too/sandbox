@@ -14,8 +14,29 @@ main > section {
 	font-family: SFMono-Regular, Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
 	font-size: 85%;
 	height: 50%;
-	overflow: auto;
-	resize: vertical;
+	position: relative;
+	z-index: 1;
+}
+
+main > section > aside {
+	background-clip: content-box;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	border: 4px solid transparent;
+	bottom: 0;
+	box-sizing: content-box;
+	cursor: row-resize;
+	height: 4px;
+	position: absolute;
+	right: calc(40% - 4px);
+	width: 20%;
+	z-index: 1;
+}
+
+aside:active ~ div,
+aside:active ~ div *,
+main > section:active + iframe {
+	pointer-events: none;
 }
 
 #files,
@@ -142,7 +163,7 @@ iframe {
 	border-color: var(--background);
 	border-style: solid;
 	border-width: var(--radius);
-	flex-grow: 1;
+	min-width: 0px;
 	user-select: none;
 
 	border-top-width: 0px;
@@ -157,8 +178,15 @@ iframe {
 
 	main > section {
 		height: 100%;
-		resize: horizontal;
 		width: 50%;
+	}
+
+	main > section > aside {
+		bottom: calc(40% - 4px);
+		cursor: col-resize;
+		height: 20%;
+		right: 0;
+		width: 4px;
 	}
 
 	iframe {
