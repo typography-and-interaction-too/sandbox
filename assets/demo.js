@@ -48,8 +48,8 @@ const selectAll = () => {
 }
 
 const codeResize = () => {
-	const edge = 8
 	const codeTray = document.querySelector('main > section')
+	const iframe = document.querySelector('iframe')
 	const affordance = codeTray.querySelector('aside')
 
 	let vertical = true
@@ -62,11 +62,14 @@ const codeResize = () => {
 
 	window.addEventListener('resize', () => {
 		(window.innerWidth >= 568) ? vertical = false : vertical = true
+		codeTray.style.removeProperty("height")
+		codeTray.style.removeProperty("width")
 		codeTrayX = parseInt(getComputedStyle(codeTray, '').width)
 		codeTrayY = parseInt(getComputedStyle(codeTray, '').height)
 	})
 
 	const codeResize = (event) => {
+		document.getSelection().removeAllRanges()
 		if (vertical) {
 			const delta = event.y - mouseY
 			codeTray.style.height = (codeTrayY + delta) + "px"
@@ -79,16 +82,12 @@ const codeResize = () => {
 
 	affordance.addEventListener('mousedown', (event) => {
 		if (vertical) {
-			if (codeTray.offsetHeight - event.clientY <= edge) {
-				mouseY = event.y
-				document.addEventListener('mousemove', codeResize, false)
-			}
+			mouseY = event.y
+			document.addEventListener('mousemove', codeResize, false)
 		}
 		else {
-			if (codeTray.offsetWidth - event.clientX <= edge) {
-				mouseX = event.x
-				document.addEventListener('mousemove', codeResize, false)
-			}
+			mouseX = event.x
+			document.addEventListener('mousemove', codeResize, false)
 		}
 	})
 
