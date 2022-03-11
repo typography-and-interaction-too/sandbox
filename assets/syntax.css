@@ -94,6 +94,9 @@
 .highlight .na {
 	color: #690;
 }
+.highlight .language-scss .p + .na {
+	color: #905;
+}
 .highlight .nb, .highlight .bp {
 	color: rgb(55, 53, 47);
 }
