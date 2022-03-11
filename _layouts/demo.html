@@ -3,7 +3,7 @@ layout: default
 ---
 
 <main>
-	<section>
+	<section {% if page.code %}style="--code: {{ page.code }}%;"{% endif %}>
 		<aside></aside>
 		{% if page.order %}
 			{% assign files = page.order %}
