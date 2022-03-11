@@ -4,7 +4,7 @@ div {
 
 @media (min-height: 400px) {
 	div:first-child {
-		background-color: gold;
+		background-color: coral;
 	}
 }
 
@@ -16,6 +16,6 @@ div {
 
 @media (max-height: 400px) {
 	div:last-child {
-		background-color: coral;
+		background-color: gold;
 	}
 }
