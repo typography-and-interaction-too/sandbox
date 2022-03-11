@@ -26,7 +26,7 @@ layout: default
 			{% for file in files %}
 				<div {% if forloop.first %} class="visible" {% endif %}>
 					{% if file contains ".css" %}
-						{% highlight css %}
+						{% highlight scss %}
 							{%- include_relative {{ file }} -%}
 						{% endhighlight %}
 					{% elsif file contains ".html" %}
