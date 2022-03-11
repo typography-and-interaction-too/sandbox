@@ -46,7 +46,10 @@
 .highlight .gt {
 	color: #aa0000;
 }
-.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kr, .highlight .kv {
+.highlight .k {
+	color: rgb(55, 53, 47);
+}
+.highlight .kc, .highlight .kd, .highlight .kn, .highlight .kr, .highlight .kv {
 	color: #008800;
 }
 .highlight .kp {
@@ -79,6 +82,9 @@
 .highlight .ss {
 	color: #aa6600;
 }
+.highlight .n {
+	color: #905;
+}
 .highlight .na {
 	color: #690;
 }
@@ -105,6 +111,9 @@
 }
 .highlight .nn {
 	color: #bb0066;
+}
+.highlight .p {
+	color: #999;
 }
 .highlight .py {
 	color: #905;
