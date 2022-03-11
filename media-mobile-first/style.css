@@ -18,6 +18,6 @@ div {
 @media (min-width: 500px) {
 	div {
 		background-color: orange;
-		width: calc((100% - 10px * 3) / 4);
+		width: calc((100% - 30px) / 4);
 	}
 }
