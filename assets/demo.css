@@ -14,7 +14,7 @@ main > section {
 	flex-shrink: 0;
 	font-family: SFMono-Regular, Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
 	font-size: 85%;
-	height: var(--code, 50%);
+	height: var(--split, 50%);
 	position: relative;
 	z-index: 1;
 }
@@ -181,7 +181,7 @@ iframe {
 
 	main > section {
 		height: 100%;
-		width: var(--code, 50%);;
+		width: var(--split, 50%);;
 	}
 
 	main > section > aside {
