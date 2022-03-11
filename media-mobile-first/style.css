@@ -11,13 +11,13 @@ div {
 @media (min-width: 400px) {
 	div {
 		background-color: gold;
-		width: calc((100% - 10px * 2) / 2);
+		width: calc((100% - 10px) / 2);
 	}
 }
 
 @media (min-width: 500px) {
 	div {
 		background-color: orange;
-		width: calc((100% - 10px * 4) / 4);
+		width: calc((100% - 10px * 3) / 4);
 	}
 }
