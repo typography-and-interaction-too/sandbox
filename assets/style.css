@@ -24,6 +24,10 @@ body > ul {
 	margin: var(--spacing);
 }
 
+body > ul {
+	padding-bottom: 33vh;
+}
+
 ul a {
 	color: dodgerblue;
 }
