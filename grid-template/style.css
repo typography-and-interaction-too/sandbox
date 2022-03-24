@@ -3,12 +3,12 @@ section {
 }
 
 section:first-child {
-	grid-template-columns: 3fr 1fr;
+	grid-template-columns: 2fr 1fr;
 }
 
 section:nth-child(2),
 section:nth-child(3) {
-	grid-template-rows: 3fr 1fr;
+	grid-template-rows: 2fr 1fr;
 }
 
 section:nth-child(3) {
@@ -16,6 +16,6 @@ section:nth-child(3) {
 }
 
 section:last-child {
-	grid-template-columns: 3fr 1fr;
-	grid-template-rows: 3fr 1fr;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 2fr 1fr;
 }
