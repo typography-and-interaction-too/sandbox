@@ -1,0 +1,27 @@
+section {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-areas:
+		"header header "
+		"main   sidebar"
+		"footer sidebar";
+}
+
+div:first-child {
+	background-color: crimson;
+	grid-area: header;
+}
+
+div:nth-child(2) {
+	background-color: hotpink;
+	grid-area: main;
+}
+
+div:nth-child(3) {
+	background-color: lightsalmon;
+	grid-area: sidebar;
+}
+
+div:last-child {
+	grid-area: footer;
+}
