@@ -7,7 +7,7 @@ section {
 	background-color: gold;
 }
 
-div {
+section > * {
 	background-color: tomato;
 	border-bottom: 2px solid firebrick;
 	border-right: 2px solid firebrick;
